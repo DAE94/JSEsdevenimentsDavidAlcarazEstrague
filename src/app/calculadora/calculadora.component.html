@@ -1,0 +1,14 @@
+<div id="divPrincipal" (click)="rotate()">
+  <h2>Calculadora de David Alcaraz Estragué</h2>
+  <img id="transform"  src="favicon.ico">
+
+  <input type="number" [(ngModel)]="num1">
+  <input type="number" [(ngModel)]="num2">
+
+  <button (click)="sumar()">Sumar</button>
+  <button (click)="restar()">Restar</button>
+  <button (click)="multiplicar()">Multiplicar</button>
+  <button (click)="dividir()">Dividir</button>
+
+  <p>Resultado: {{ resultado }}</p>
+</div>
