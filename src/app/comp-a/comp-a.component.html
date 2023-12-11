@@ -1,0 +1,36 @@
+<body id="body">
+<!--exercici 1-->
+<div id="part1">
+  <div id="cos" class="colored-div"
+                (mousedown)="changeColor('blue')"
+                (mouseup)="changeColor('orange')"
+                (mouseout)="changeColor('green')"
+                [style.background]="currentColor">
+  </div>
+<!--  exercici 2-->
+  <p><b>Tecla apretada:</b></p>
+  <div id="char" class="ex2i3"></div>
+<!--  exercici 3 -->
+  <div id="string" class="ex2i3"></div>
+<!--  exercici 5-->
+  <p>prova a posar "qwerty"</p>
+
+<!--  exercici 4-->
+  <div>
+    <p><b> Clicka l'icono </b></p>
+    <img (click)="count()" id="boton1" src="favicon.ico">
+    <p id="count"></p>
+  </div>
+  <button id="boton2" style="height:30px; width: 50px;" (click)="resset()">resset</button>
+</div>
+<div>
+<!--  exercici 6-->
+  <input type="text" name="email" [(ngModel)]="email" />
+  <input type="text" name="telefon" [(ngModel)]="telefon" />
+  <button type="submit" (click)="concatenar()">Envia</button>
+<!--  exercici 7-->
+  <div class="concatenat" *ngIf="emTel===''"><p-progressSpinner></p-progressSpinner></div>
+  <div class="concatenat">{{emTel}}</div>
+  <p-checkbox [(ngModel)]="checked" [binary]="true" inputId="binary" id="checkbox" class="" (mouseover)="alerta()"></p-checkbox>
+</div>
+</body>

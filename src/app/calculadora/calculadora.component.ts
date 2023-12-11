@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {FormsModule} from "@angular/forms";
 import {NgOptimizedImage} from "@angular/common";
+//@ts-ignore
+import * as events from "events";
 
 @Component({
   selector: 'app-calculadora',
@@ -24,13 +26,19 @@ export class CalculadoraComponent {
 
   restar() {
     this.resultado = this.num1 - this.num2;
+    console.log("event restar")
+
   }
 
   multiplicar() {
     this.resultado = this.num1 * this.num2;
+    console.log("event multiplicar")
+
   }
 
   dividir() {
+    console.log("event dividir")
+
     if (this.num2 !== 0) {
       this.resultado = this.num1 / this.num2;
     } else {
@@ -43,6 +51,12 @@ export class CalculadoraComponent {
       image.classList.add("rotate");
       console.log("event rotar")
     }
-
   }
+  show (s:string){
+   console.log(s)
+    let value = document.getElementById("showDiv")!;
+   value.innerHTML = s;
+  }
+
+  protected readonly events = events;
 }
