@@ -2,13 +2,13 @@
   <h2>Calculadora de David Alcaraz Estragué</h2>
   <img id="transform"  src="favicon.ico">
 
-  <input type="number" [(ngModel)]="num1">
-  <input type="number" [(ngModel)]="num2">
+  <input (mouseover)="show('num1')" type="number" [(ngModel)]="num1">
+  <input (mouseover)="show('num2')" type="number" [(ngModel)]="num2">
 
-  <button (click)="sumar()">Sumar</button>
-  <button (click)="restar()">Restar</button>
-  <button (click)="multiplicar()">Multiplicar</button>
-  <button (click)="dividir()">Dividir</button>
+  <button (mouseover)="show('suma')" (click)="sumar()">Sumar</button>
+  <button (mouseover)="show('resta')" (click)="restar()">Restar</button>
+  <button (mouseover)="show('multiplicacio')" (click)="multiplicar()">Multiplicar</button>
+  <button (mouseover)="show('divisio')" (click)="dividir()">Dividir</button>
 
-  <p>Resultado: {{ resultado }}</p>
+  <p>Resultado: {{resultado}}</p><p id="showDiv"></p>
 </div>

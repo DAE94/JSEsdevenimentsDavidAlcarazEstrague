@@ -1,0 +1,38 @@
+body{
+  display: flex;
+}
+#cos{
+  width: 200px;
+  height: 200px;
+  cursor:pointer;
+}
+#part1 {
+  border: grey solid thin;
+  width: 33%;
+}
+.ex2i3{
+  width: 50px;
+  height: 30px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  outline: none;
+}
+#string{
+  width: 100%;
+}
+.concatenat{
+  border: grey thin solid;
+}
+#char{
+  font-size: xx-large;
+}
+#button2 {
+  margin-left: 500px;
+  margin-top: 500px;
+}
+
+
